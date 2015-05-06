@@ -54,9 +54,15 @@
       });
 
       function latest(r) {
+        if (!r.length) {
+          return undefined;
+        }
         return r.slice(-1)[0][1];
       }
       function latestts(r) {
+        if (!r.length) {
+          return undefined;
+        }
         return r.slice(-1)[0][0];
       }
       function resetUpdater() {
