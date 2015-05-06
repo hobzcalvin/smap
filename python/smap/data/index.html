@@ -180,8 +180,8 @@
       function makeTimeseries(path, meta) {
 			    console.log(meta);
         if (meta['Actuator'] === undefined) {
-          return latest(meta["Readings"]) + 
-                 meta ["Properties"]["UnitofMeasure"];
+          return latest(meta["Readings"]) + " " +
+                 meta["Properties"]["UnitofMeasure"];
         } else if (meta['Actuator']['Model'] == 'binary') {
           return makeBinaryActuator(path, meta);
         } else if (meta['Actuator']['Model'] == 'discrete') {
